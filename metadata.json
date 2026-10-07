@@ -1,0 +1,6 @@
+{
+  "name": "Nova Portfolio | Editorial Bento Showcase",
+  "description": "High-impact editorial bento personal portfolio with interactive case study modal, career timeline, consultation booking, and live customizer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
