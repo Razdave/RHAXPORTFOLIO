@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { X, Clock } from 'lucide-react';
 import { ArticleItem } from '../types';
+import geometricPastelImage from '../assets/images/sculptural_geometric_pastel_1791384398084.jpg';
+import minimalistWarmImage from '../assets/images/sculptural_minimalist_warm_1791384383016.jpg';
+import luminaBrandImage from '../assets/images/project_lumina_brand_1791383609770.jpg';
 
 interface InsightsSectionProps {
   articles: ArticleItem[];
@@ -11,9 +14,9 @@ export const InsightsSection: React.FC<InsightsSectionProps> = ({ articles }) =>
 
   // Custom thumbnail colors/composition to mirror the template's colorful 3D blocks
   const articleImages = [
-    '/src/assets/images/sculptural_geometric_pastel_1791384398084.jpg',
-    '/src/assets/images/sculptural_minimalist_warm_1791384383016.jpg',
-    '/src/assets/images/project_lumina_brand_1791383609770.jpg',
+    geometricPastelImage,
+    minimalistWarmImage,
+    luminaBrandImage,
   ];
 
   return (
