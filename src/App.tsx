@@ -16,10 +16,12 @@ import { BookingModal } from './components/BookingModal';
 import { ResumeModal } from './components/ResumeModal';
 import { LiveCustomizerDrawer } from './components/LiveCustomizerDrawer';
 
+const PROFILE_STORAGE_KEY = 'nova_portfolio_profile_v3';
+
 export default function App() {
   const [profile, setProfile] = useState<UserProfile>(() => {
     try {
-      const stored = localStorage.getItem('nova_portfolio_profile_v2');
+      const stored = localStorage.getItem(PROFILE_STORAGE_KEY);
       if (stored) {
         return JSON.parse(stored);
       }
@@ -37,7 +39,7 @@ export default function App() {
   // Synchronize profile changes to local storage
   useEffect(() => {
     try {
-      localStorage.setItem('nova_portfolio_profile_v2', JSON.stringify(profile));
+      localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(profile));
     } catch {
       // LocalStorage error handling
     }
@@ -46,7 +48,7 @@ export default function App() {
   const handleResetProfile = () => {
     setProfile(defaultProfile);
     try {
-      localStorage.removeItem('nova_portfolio_profile_v2');
+      localStorage.removeItem(PROFILE_STORAGE_KEY);
     } catch {
       // ignore
     }
@@ -100,12 +102,17 @@ export default function App() {
         <FinalCTASection onOpenBooking={() => setIsBookingOpen(true)} />
       </main>
 
-      {/* 10. Dark Editorial Footer with giant hello@dnova.com */}
+      {/* 10. Dark Editorial Footer with giant hello@raazepibe.com */}
       <Footer
         profile={profile}
         onOpenBooking={() => setIsBookingOpen(true)}
         onOpenCustomizer={() => setIsCustomizerOpen(true)}
       />
+      {/* <Navbar
+        profile={profile}
+        onOpenBooking={() => setIsBookingOpen(true)}
+        onOpenCustomizer={() => setIsCustomizerOpen(true)}
+      /> */}
 
       {/* Modals & Interactive Drawers */}
       <CaseStudyModal

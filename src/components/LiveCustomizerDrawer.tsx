@@ -96,8 +96,9 @@ export const LiveCustomizerDrawer: React.FC<LiveCustomizerDrawerProps> = ({
             </h4>
 
             <div>
-              <label className="text-neutral-600 block mb-1">Name</label>
+              <label htmlFor="customizer-name" className="text-neutral-600 block mb-1">Name</label>
               <input
+                id="customizer-name"
                 type="text"
                 value={profile.name}
                 onChange={(e) => handleChange('name', e.target.value)}
@@ -106,8 +107,9 @@ export const LiveCustomizerDrawer: React.FC<LiveCustomizerDrawerProps> = ({
             </div>
 
             <div>
-              <label className="text-neutral-600 block mb-1">Hero Greeting Headline</label>
+              <label htmlFor="customizer-greeting" className="text-neutral-600 block mb-1">Hero Greeting Headline</label>
               <input
+                id="customizer-greeting"
                 type="text"
                 value={profile.greetingHeadline}
                 onChange={(e) => handleChange('greetingHeadline', e.target.value)}
@@ -116,8 +118,9 @@ export const LiveCustomizerDrawer: React.FC<LiveCustomizerDrawerProps> = ({
             </div>
 
             <div>
-              <label className="text-neutral-600 block mb-1">Hero Subtitle</label>
+              <label htmlFor="customizer-subtitle" className="text-neutral-600 block mb-1">Hero Subtitle</label>
               <input
+                id="customizer-subtitle"
                 type="text"
                 value={profile.bioSubtitle}
                 onChange={(e) => handleChange('bioSubtitle', e.target.value)}
@@ -133,8 +136,9 @@ export const LiveCustomizerDrawer: React.FC<LiveCustomizerDrawerProps> = ({
             </h4>
 
             <div>
-              <label className="text-neutral-600 block mb-1">Bio Paragraph</label>
+              <label htmlFor="customizer-bio" className="text-neutral-600 block mb-1">Bio Paragraph</label>
               <textarea
+                id="customizer-bio"
                 rows={3}
                 value={profile.detailedBio}
                 onChange={(e) => handleChange('detailedBio', e.target.value)}
@@ -153,8 +157,9 @@ export const LiveCustomizerDrawer: React.FC<LiveCustomizerDrawerProps> = ({
               <div key={i} className="p-3 bg-neutral-50 rounded-xl border border-neutral-200 space-y-1.5">
                 <div className="grid grid-cols-2 gap-2">
                   <div>
-                    <label className="text-[10px] text-neutral-400 block mb-0.5">Value</label>
+                    <label htmlFor={`customizer-stat-value-${i}`} className="text-[10px] text-neutral-400 block mb-0.5">Value</label>
                     <input
+                      id={`customizer-stat-value-${i}`}
                       type="text"
                       value={st.value}
                       onChange={(e) => handleStatChange(i, 'value', e.target.value)}
@@ -162,8 +167,9 @@ export const LiveCustomizerDrawer: React.FC<LiveCustomizerDrawerProps> = ({
                     />
                   </div>
                   <div>
-                    <label className="text-[10px] text-neutral-400 block mb-0.5">Label</label>
+                    <label htmlFor={`customizer-stat-label-${i}`} className="text-[10px] text-neutral-400 block mb-0.5">Label</label>
                     <input
+                      id={`customizer-stat-label-${i}`}
                       type="text"
                       value={st.label}
                       onChange={(e) => handleStatChange(i, 'label', e.target.value)}
@@ -183,8 +189,9 @@ export const LiveCustomizerDrawer: React.FC<LiveCustomizerDrawerProps> = ({
 
             <div className="grid grid-cols-2 gap-2">
               <div>
-                <label className="text-neutral-600 block mb-1">Percentage / Number</label>
+                <label htmlFor="customizer-standout-value" className="text-neutral-600 block mb-1">Percentage / Number</label>
                 <input
+                  id="customizer-standout-value"
                   type="text"
                   value={profile.standoutMetric.value}
                   onChange={(e) =>
@@ -198,8 +205,9 @@ export const LiveCustomizerDrawer: React.FC<LiveCustomizerDrawerProps> = ({
               </div>
 
               <div>
-                <label className="text-neutral-600 block mb-1">Metric Description</label>
+                <label htmlFor="customizer-standout-label" className="text-neutral-600 block mb-1">Metric Description</label>
                 <input
+                  id="customizer-standout-label"
                   type="text"
                   value={profile.standoutMetric.label}
                   onChange={(e) =>
@@ -221,8 +229,9 @@ export const LiveCustomizerDrawer: React.FC<LiveCustomizerDrawerProps> = ({
             </h4>
 
             <div>
-              <label className="text-neutral-600 block mb-1">Footer Email</label>
+              <label htmlFor="customizer-email" className="text-neutral-600 block mb-1">Footer Email</label>
               <input
+                id="customizer-email"
                 type="email"
                 value={profile.email}
                 onChange={(e) => handleChange('email', e.target.value)}

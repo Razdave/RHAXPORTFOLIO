@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowDown } from 'lucide-react';
 import { UserProfile } from '../types';
+import heroPortrait from '../assets/images/ibe_sideview_1234.png';
 
 interface HeroProps {
   profile: UserProfile;
@@ -22,12 +23,12 @@ export const Hero: React.FC<HeroProps> = ({ profile }) => {
           
           {/* Left Column (Stats + Giant Headline) */}
           <div className="lg:col-span-6 flex flex-col justify-center z-10">
-            
+
             {/* Top Left Stats Pair */}
             <div className="flex items-start gap-12 sm:gap-16 mb-12 sm:mb-16">
               <div>
                 <span className="text-3xl sm:text-4xl font-normal text-[#111111] font-display block tracking-tight">
-                  {profile.stats[0]?.value || '+200'}
+                  {profile.stats[0]?.value || '+80'}
                 </span>
                 <span className="text-xs text-neutral-500 font-normal mt-1 block">
                   {profile.stats[0]?.label || 'Project completed'}
@@ -36,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ profile }) => {
 
               <div>
                 <span className="text-3xl sm:text-4xl font-normal text-[#111111] font-display block tracking-tight">
-                  {profile.stats[1]?.value || '+50'}
+                  {profile.stats[1]?.value || '+30'}
                 </span>
                 <span className="text-xs text-neutral-500 font-normal mt-1 block">
                   {profile.stats[1]?.label || 'Startup raised'}
@@ -46,11 +47,11 @@ export const Hero: React.FC<HeroProps> = ({ profile }) => {
 
             {/* Giant Typographic Headline */}
             <div>
-              <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-normal text-[#111111] font-display tracking-tight leading-[0.95] mb-6">
-                {profile.greetingHeadline || 'Hello'}
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-[#111111] font-display tracking-tight leading-[0.95] mb-6">
+                {profile.greetingHeadline || 'Hi, I’m RAZEP'}
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-neutral-700 font-light tracking-wide">
-                {profile.bioSubtitle || "— It's D.Nova a design wizerd"}
+                {profile.bioSubtitle || "— It's RAZEP a web developer"}
               </p>
             </div>
 
@@ -63,7 +64,8 @@ export const Hero: React.FC<HeroProps> = ({ profile }) => {
               {!imageError ? (
                 <div className="relative w-full max-w-[460px] aspect-[4/5] overflow-hidden flex items-end">
                   <img
-                    src="/src/assets/images/hero_designer_glasses_1791384344068.jpg"
+                    // src={heroPortrait}
+                    src="/src/assets/images/ibe_sideview_1234.png"
                     alt={`${profile.name} - ${profile.title}`}
                     referrerPolicy="no-referrer"
                     onError={() => setImageError(true)}
@@ -93,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ profile }) => {
             </span>
             <span className="h-3 w-[1px] bg-neutral-300" aria-hidden="true" />
             <span className="text-[11px] text-neutral-400 hidden sm:inline">
-              Product designer
+              web developer
             </span>
           </div>
 

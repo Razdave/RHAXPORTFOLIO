@@ -1,30 +1,29 @@
 import { UserProfile, Pillar, ExperienceItem, ProjectItem, ArticleItem } from '../types';
 
 export const defaultProfile: UserProfile = {
-  name: 'D.Nova',
-  wordmark: 'D.Nova',
-  title: 'Product designer',
-  greetingHeadline: "Hello",
-  bioSubtitle: "— It's D.Nova a design wizerd",
-  detailedBio: "I'm specialize in turning complex problems into elegant solutions. My approach blends creativity with strategic thinking to deliver designs that not only look great but work seamlessly. Ready to start your next project?",
-  location: 'San Francisco & Berlin',
-  availability: 'Available for New Projects',
-  email: 'hello@dnova.com',
-  phone: '+1 (415) 890-2341',
+  name: 'RAZEP IBE',
+  wordmark: 'RI',
+  title: 'Web Developer',
+  greetingHeadline: "Hi, I’m RAZEP IBE",
+  bioSubtitle: '— Web developer building modern digital experiences',
+  detailedBio: "I’m a web developer based in Cross River State, Nigeria, focused on creating responsive, user-centered websites and web applications that solve real problems and deliver smooth digital experiences.",
+  location: 'Cross River State, Nigeria',
+  availability: 'Available for freelance and full-time opportunities',
+  email: 'hello@raazepibe.com',
+  phone: '+234 811 324 6342',
   stats: [
-    { value: '+200', label: 'Project completed', subtext: 'Across SaaS and digital products' },
-    { value: '+50', label: 'Startup raised', subtext: 'Helped founders secure funding' },
+    { value: '100%', label: 'Client-focused', subtext: 'Built around user needs and business goals' },
+    { value: '24/7', label: 'Problem solving', subtext: 'From concept to deployment' },
   ],
   socialLinks: [
-    { platform: 'LinkedIn', url: 'https://linkedin.com', handle: '/in/dnova-design' },
-    { platform: 'Twitter / X', url: 'https://x.com', handle: '@dnova_design' },
-    { platform: 'GitHub', url: 'https://github.com', handle: 'github.com/dnova-dev' },
-    { platform: 'Dribbble', url: 'https://dribbble.com', handle: 'dribbble.com/dnova' },
+    { platform: 'instagram', url: 'https://www.instagram.com/r_the5th_ibe?rpxt=MTI5Z283MTBlazR3&utm_source=qr', handle: 'Follow me' },
+    { platform: 'GitHub', url: 'https://github.com/Razdave', handle: 'View projects' },
+    { platform: 'whatsapp', url: 'https://wa.me/2348113246342', handle: 'Chat with me' },
   ],
   standoutMetric: {
-    value: '120%',
-    label: 'Average increase in client engagement in the first 6 months',
-    context: 'Audited across 18 enterprise client deployments in 2025–2026',
+    value: 'Modern',
+    label: 'Web experiences designed to be fast, functional, and memorable',
+    context: 'Focused on clean interfaces, responsive design, and practical results',
   },
 };
 
@@ -36,22 +35,22 @@ export const defaultAboutPoints = [
 export const defaultShowcaseCarousel = [
   {
     id: 'show-1',
-    title: 'Halo Digital Agency website',
+    title: 'Dental Clinic',
     client: 'For Squeeze',
-    image: '/src/assets/images/sculptural_minimalist_warm_1791384383016.jpg',
+    image: '/src/assets/images/dental_hero.PNG',
   },
   {
     id: 'show-2',
-    title: 'Halo Digital Agency website',
+    title: 'Beauty/spa website',
     client: 'For Squeeze',
-    image: '/src/assets/images/project_lumina_brand_1791383609770.jpg',
+    image: '/src/assets/images/saloon_foto.PNG',
     hasOverlayButton: true,
   },
   {
     id: 'show-3',
     title: 'Digital Agency website',
     client: 'For Squeeze',
-    image: '/src/assets/images/sculptural_geometric_pastel_1791384398084.jpg',
+    image: '/src/assets/images/unforsaken_foto.PNG',
   },
 ];
 
@@ -59,10 +58,10 @@ export const defaultExperiences: ExperienceItem[] = [
   {
     id: 'exp-1',
     role: 'Senior Product Designer',
-    company: 'Creative Minds, New York, USA',
+    company: 'Creative Minds',
     period: 'February 2022 - Present',
-    location: 'New York, USA',
-    summary: 'Innovated designs, New York, Senior Product Designer',
+    location: 'Cross River State, Nigeria',
+    summary: 'Innovated designs as a Senior Product Designer',
     highlights: [
       'Led the core cross-functional product design team for web and mobile flagships.',
       'Designed end-to-end user flows and reduced customer drop-off by 35%.',
@@ -73,10 +72,10 @@ export const defaultExperiences: ExperienceItem[] = [
   {
     id: 'exp-2',
     role: 'Led UX/UI',
-    company: 'Innovative Designs Inc, USA',
+    company: 'Innovative Designs Inc',
     period: 'January 2020 - February 2022',
-    location: 'San Francisco, USA',
-    summary: 'Led UX/UI, San Francisco, Crafting tomorrow\'s experiences',
+    location: 'Cross River State, Nigeria',
+    summary: 'Led UX/UI, crafting tomorrow\'s experiences',
     highlights: [
       'Managed end-to-end design sprints from conceptual wireframes to high-fidelity systems.',
       'Collaborated closely with front-end engineers to implement pixel-perfect micro-interactions.',
@@ -87,10 +86,10 @@ export const defaultExperiences: ExperienceItem[] = [
   {
     id: 'exp-3',
     role: 'Principal Designer',
-    company: 'Visionary Creations Ltd, UK',
+    company: 'Visionary Creations Ltd',
     period: 'February 2022 - Present',
-    location: 'Berlin, Germany',
-    summary: 'Principal Designer, Berlin, Crafting tomorrow\'s experiences',
+    location: 'Cross River State, Nigeria',
+    summary: 'Principal Designer, crafting tomorrow\'s experiences',
     highlights: [
       'Standardized global branding language and web component libraries.',
       'Advised startup founders on UX validation and customer discovery.',
@@ -101,9 +100,9 @@ export const defaultExperiences: ExperienceItem[] = [
   {
     id: 'exp-4',
     role: 'Strategic Design Lead',
-    company: 'FutureTech, Berlin, Germany',
+    company: 'FutureTech',
     period: 'February 2022 - Present',
-    location: 'Berlin, Germany',
+    location: 'Cross River State, Nigeria',
     summary: 'From crafting seamless user experiences to leading strategic product design initiatives, each experience has shaped my approach and strengthened my passion for solving design challenges',
     highlights: [
       'Crafted seamless user experiences across flagship autonomous tools.',
@@ -116,10 +115,10 @@ export const defaultExperiences: ExperienceItem[] = [
   {
     id: 'exp-5',
     role: 'Senior Product Designer',
-    company: 'Expert Designs Inc, USA',
+    company: 'Expert Designs Inc',
     period: 'February 2022 - Present',
-    location: 'New York, USA',
-    summary: 'Innovated designs, New York, Senior Product Designer',
+    location: 'Cross River State, Nigeria',
+    summary: 'Innovated designs as a Senior Product Designer',
     highlights: [
       'Spearheaded user research and multi-platform interface design.',
       'Scaled design operations across distributed product squads.',
@@ -130,27 +129,7 @@ export const defaultExperiences: ExperienceItem[] = [
 ];
 
 export const defaultProjects: ProjectItem[] = [
-  {
-    id: 'proj-1',
-    title: 'Halo Digital Agency website',
-    category: 'Digital Product',
-    client: 'For Squeeze',
-    year: '2024',
-    metricsBadge: 'Case Study',
-    summary: 'Modern digital agency web platform engineered for high conversion and immersive storytelling.',
-    challenge: 'Needed to display rich tactile 3D artworks without sacrificing page speed or clarity.',
-    solution: 'Designed an elegant minimal grid with subtle tactile micro-interactions and smooth scroll physics.',
-    impact: 'Increased client inquiries by 140% and received featured design honors.',
-    keyStats: [
-      { label: 'Conversion Lift', value: '+140%' },
-      { label: 'Page Load Speed', value: '0.8s' },
-      { label: 'Visitor Engagement', value: '4m 12s' },
-    ],
-    image: '/src/assets/images/sculptural_geometric_pastel_1791384398084.jpg',
-    tags: ['UI/UX', 'Branding', 'Web Design'],
-    liveUrl: 'https://halodigital.xyz',
-    featured: true,
-  },
+
   {
     id: 'proj-2',
     title: 'Halo Digital Agency website',

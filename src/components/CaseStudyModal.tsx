@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { X, ArrowUpRight, CheckCircle2, BarChart2 } from 'lucide-react';
 import { ProjectItem } from '../types';
-
 interface CaseStudyModalProps {
   project: ProjectItem | null;
   onClose: () => void;

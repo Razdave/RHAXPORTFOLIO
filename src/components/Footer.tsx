@@ -12,7 +12,7 @@ export const Footer: React.FC<FooterProps> = ({ profile, onOpenCustomizer }) => 
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(profile.email || 'hello@dnova.com');
+    navigator.clipboard.writeText(profile.email || 'hello@raazepibe.com');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -48,10 +48,10 @@ export const Footer: React.FC<FooterProps> = ({ profile, onOpenCustomizer }) => 
           {/* Right: Giant Typographic Email */}
           <div className="flex items-center gap-4 group">
             <a
-              href={`mailto:${profile.email || 'hello@dnova.com'}`}
-              className="text-3xl sm:text-5xl md:text-6xl font-normal text-white font-display tracking-tight hover:text-neutral-300 transition-colors"
+              href={`mailto:${profile.email || 'hello@raazepibe.com'}`}
+              className="text-2xl sm:text-4xl md:text-5xl font-normal text-white font-display tracking-tight hover:text-neutral-300 transition-colors"
             >
-              {profile.email || 'hello@dnova.com'}
+              {profile.email || 'hello@raazepibe.com'}
             </a>
 
             <button
@@ -68,7 +68,7 @@ export const Footer: React.FC<FooterProps> = ({ profile, onOpenCustomizer }) => 
 
         {/* Marginal Footer Bar */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
-          <p>© {new Date().getFullYear()} {profile.name || 'D.Nova'}. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {profile.name || 'RAZEP'}. All rights reserved.</p>
 
           <div className="flex items-center gap-4">
             <button

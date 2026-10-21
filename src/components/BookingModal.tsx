@@ -17,7 +17,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pro
     company: '',
     date: '2026-10-15',
     timeSlot: '10:00 AM PST',
-    projectBudget: '$15k - $30k',
+    projectBudget: '₦750,000',
     notes: '',
   });
 
@@ -39,7 +39,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pro
   ];
 
   const timeSlots = ['09:30 AM PST', '11:00 AM PST', '02:00 PM PST', '04:00 PM PST'];
-  const budgetTiers = ['< $10,000', '$10k - $25k', '$25k - $50k', '$50k+'];
+  const budgetTiers = ['₦1,000,000', '₦750,000', '₦500,000', '₦250,000'];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -81,9 +81,9 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pro
             
             {/* Service Selection */}
             <div>
-              <label className="text-xs font-mono text-neutral-500 uppercase tracking-wider block mb-2.5">
+              <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider block mb-2.5">
                 1. Select Engagement Focus
-              </label>
+              </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {services.map((srv) => {
                   const isSelected = formData.service === srv.title;
@@ -113,10 +113,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pro
             {/* Date & Time Slot */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="text-xs font-mono text-neutral-500 uppercase tracking-wider block mb-2">
+                <label htmlFor="booking-date" className="text-xs font-mono text-neutral-500 uppercase tracking-wider block mb-2">
                   Preferred Date
                 </label>
                 <input
+                  id="booking-date"
                   type="date"
                   value={formData.date}
                   onChange={(e) => setFormData({ ...formData, date: e.target.value })}
@@ -126,10 +127,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pro
               </div>
 
               <div>
-                <label className="text-xs font-mono text-neutral-500 uppercase tracking-wider block mb-2">
+                <label htmlFor="booking-timeslot" className="text-xs font-mono text-neutral-500 uppercase tracking-wider block mb-2">
                   Preferred Time Slot
                 </label>
                 <select
+                  id="booking-timeslot"
                   value={formData.timeSlot}
                   onChange={(e) => setFormData({ ...formData, timeSlot: e.target.value })}
                   className="w-full px-3.5 py-2.5 bg-neutral-50 border border-neutral-200 rounded-xl text-xs text-[#111111] focus:outline-none focus:border-black"
@@ -144,10 +146,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pro
             {/* Contact Details */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="text-xs font-mono text-neutral-500 uppercase tracking-wider block mb-2">
+                <label htmlFor="booking-name" className="text-xs font-mono text-neutral-500 uppercase tracking-wider block mb-2">
                   Your Name *
                 </label>
                 <input
+                  id="booking-name"
                   type="text"
                   placeholder="e.g. Alex Vance"
                   value={formData.name}
@@ -158,10 +161,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pro
               </div>
 
               <div>
-                <label className="text-xs font-mono text-neutral-500 uppercase tracking-wider block mb-2">
+                <label htmlFor="booking-email" className="text-xs font-mono text-neutral-500 uppercase tracking-wider block mb-2">
                   Work Email *
                 </label>
                 <input
+                  id="booking-email"
                   type="email"
                   placeholder="alex@company.com"
                   value={formData.email}
@@ -175,10 +179,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pro
             {/* Company & Budget */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="text-xs font-mono text-neutral-500 uppercase tracking-wider block mb-2">
+                <label htmlFor="booking-company" className="text-xs font-mono text-neutral-500 uppercase tracking-wider block mb-2">
                   Company / Organization
                 </label>
                 <input
+                  id="booking-company"
                   type="text"
                   placeholder="e.g. Halo Agency"
                   value={formData.company}
@@ -188,10 +193,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pro
               </div>
 
               <div>
-                <label className="text-xs font-mono text-neutral-500 uppercase tracking-wider block mb-2">
+                <label htmlFor="booking-budget" className="text-xs font-mono text-neutral-500 uppercase tracking-wider block mb-2">
                   Budget Allocation
                 </label>
                 <select
+                  id="booking-budget"
                   value={formData.projectBudget}
                   onChange={(e) => setFormData({ ...formData, projectBudget: e.target.value })}
                   className="w-full px-3.5 py-2.5 bg-neutral-50 border border-neutral-200 rounded-xl text-xs text-[#111111] focus:outline-none focus:border-black"
@@ -205,10 +211,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pro
 
             {/* Project Notes */}
             <div>
-              <label className="text-xs font-mono text-neutral-500 uppercase tracking-wider block mb-2">
+              <label htmlFor="booking-notes" className="text-xs font-mono text-neutral-500 uppercase tracking-wider block mb-2">
                 Project Overview & Goals
               </label>
               <textarea
+                id="booking-notes"
                 rows={3}
                 placeholder="Tell me what you are looking to build or redesign..."
                 value={formData.notes}
