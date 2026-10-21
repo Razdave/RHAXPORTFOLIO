@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { ExperienceItem } from '../types';
+import dentalHeroImage from '../assets/images/dental_hero.png';
+import unforsakenImage from '../assets/images/unforsaken_foto.png';
+import saloonImage from '../assets/images/saloon_foto.png';
 
 interface ExperienceSectionProps {
   experiences: ExperienceItem[];
@@ -105,7 +108,7 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({ experience
                       <div className="lg:col-span-6 grid grid-cols-3 gap-3">
                         <div className="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-200 shadow-xs">
                           <img
-                            src="/src/assets/images/sculptural_minimalist_warm_1791384383016.jpg"
+                            src={dentalHeroImage}
                             alt="Design detail"
                             referrerPolicy="no-referrer"
                             className="w-full h-full object-cover"
@@ -113,7 +116,7 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({ experience
                         </div>
                         <div className="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-200 shadow-xs">
                           <img
-                            src="/src/assets/images/sculptural_geometric_pastel_1791384398084.jpg"
+                            src={unforsakenImage}
                             alt="Architecture and materials"
                             referrerPolicy="no-referrer"
                             className="w-full h-full object-cover"
@@ -121,7 +124,7 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({ experience
                         </div>
                         <div className="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-200 shadow-xs">
                           <img
-                            src="/src/assets/images/project_lumina_brand_1791383609770.jpg"
+                            src={saloonImage}
                             alt="Lighting and forms"
                             referrerPolicy="no-referrer"
                             className="w-full h-full object-cover"

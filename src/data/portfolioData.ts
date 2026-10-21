@@ -1,4 +1,7 @@
 import { UserProfile, Pillar, ExperienceItem, ProjectItem, ArticleItem } from '../types';
+import dentalHeroImage from '../assets/images/dental_hero.png';
+import unforsakenImage from '../assets/images/unforsaken_foto.png';
+import saloonImage from '../assets/images/saloon_foto.png';
 
 export const defaultProfile: UserProfile = {
   name: 'RAZEP IBE',
@@ -37,20 +40,20 @@ export const defaultShowcaseCarousel = [
     id: 'show-1',
     title: 'Dental Clinic',
     client: 'For Squeeze',
-    image: '/src/assets/images/dental_hero.PNG',
+    image: dentalHeroImage,
   },
   {
     id: 'show-2',
     title: 'Beauty/spa website',
     client: 'For Squeeze',
-    image: '/src/assets/images/saloon_foto.PNG',
+    image: saloonImage,
     hasOverlayButton: true,
   },
   {
     id: 'show-3',
     title: 'Digital Agency website',
     client: 'For Squeeze',
-    image: '/src/assets/images/unforsaken_foto.PNG',
+    image: unforsakenImage,
   },
 ];
 
@@ -109,7 +112,6 @@ export const defaultExperiences: ExperienceItem[] = [
       'Led strategic design roadmaps with multi-disciplinary stakeholders.',
     ],
     skills: ['Branding', 'UI/UX'],
-    previewImage: '/src/assets/images/sculptural_geometric_pastel_1791384398084.jpg',
     isExpandedDefault: true,
   },
   {
@@ -132,7 +134,7 @@ export const defaultProjects: ProjectItem[] = [
 
   {
     id: 'proj-2',
-    title: 'Halo Digital Agency website',
+    title: 'Clothing website',
     category: 'Brand Systems',
     client: 'For Squeeze',
     year: '2024',
@@ -146,14 +148,14 @@ export const defaultProjects: ProjectItem[] = [
       { label: 'Bounce Rate', value: '18%' },
       { label: 'Global Reach', value: '120k' },
     ],
-    image: '/src/assets/images/sculptural_minimalist_warm_1791384383016.jpg',
+    image: unforsakenImage,
     tags: ['UI/UX', 'Branding', 'Art Direction'],
     liveUrl: 'https://halodigital.xyz',
     featured: true,
   },
   {
     id: 'proj-3',
-    title: 'Halo Digital Agency website',
+    title: 'Saloon/spawebsite',
     category: 'Motion & 3D',
     client: 'For Squeeze',
     year: '2024',
@@ -167,11 +169,11 @@ export const defaultProjects: ProjectItem[] = [
       { label: 'Active Users', value: '25k' },
       { label: 'Design Awards', value: '3x' },
     ],
-    image: '/src/assets/images/project_lumina_brand_1791383609770.jpg',
+    image: saloonImage,
     tags: ['UI/UX', 'Branding', 'Motion'],
     liveUrl: 'https://halodigital.xyz',
     featured: true,
-  },
+  }
 ];
 
 export const defaultArticles: ArticleItem[] = [
