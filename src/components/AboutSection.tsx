@@ -3,6 +3,9 @@ import { Plus, Minus, ArrowUpRight } from 'lucide-react';
 import { UserProfile } from '../types';
 import { defaultAboutPoints } from '../data/portfolioData';
 
+const aboutPortrait = new URL('../assets/images/rhax_design_me.JPG', import.meta.url).href;
+const studioImage = new URL('../assets/images/rhaz_about_sideview.jpeg', import.meta.url).href;
+
 interface AboutSectionProps {
   profile: UserProfile;
   onOpenBooking: () => void;
@@ -76,7 +79,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ profile, onOpenBooki
             {/* Bottom Photo Card: Smiling Designer in White T-shirt */}
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-neutral-100 shadow-xs group">
               <img
-                src="/src/assets/images/rhax_design_me.jpg"
+                src={aboutPortrait}
                 alt="Razep Designer in Studio"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500 filter grayscale-[15%]"
@@ -94,7 +97,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ profile, onOpenBooki
               className="relative rounded-3xl overflow-hidden aspect-[4/3] sm:aspect-[16/11] bg-neutral-100 cursor-pointer group shadow-xs"
             >
               <img
-                src="/src/assets/images/rhaz_about_sideview.jpeg"
+                src={studioImage}
                 alt="Creative Studio Work"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform duration-500"
