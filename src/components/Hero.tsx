@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { ArrowDown } from 'lucide-react';
 import { UserProfile } from '../types';
-import heroPortrait from '../assets/images/ibe_sideview_1234.png';
+
+const heroPortrait = new URL('../assets/images/ibe_sideview_1234.PNG', import.meta.url).href;
 
 interface HeroProps {
   profile: UserProfile;
@@ -64,8 +65,7 @@ export const Hero: React.FC<HeroProps> = ({ profile }) => {
               {!imageError ? (
                 <div className="relative w-full max-w-[460px] aspect-[4/5] overflow-hidden flex items-end">
                   <img
-                    // src={heroPortrait}
-                    src="/src/assets/images/ibe_sideview_1234.png"
+                    src={heroPortrait}
                     alt={`${profile.name} - ${profile.title}`}
                     referrerPolicy="no-referrer"
                     onError={() => setImageError(true)}
